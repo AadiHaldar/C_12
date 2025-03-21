@@ -1,29 +1,79 @@
-# AI-Finance-Monitor
-AI-Finance-Monitor  is an advanced budget forecasting and anomaly detection system that helps users track financial transactions, detect unusual spending patterns, and integrate securely with bank accounts. It combines machine learning, real-time monitoring, and secure banking APIs to provide accurate insights and fraud prevention.
+# 🍔 Canteen Management System with AI-Powered Recommendations
 
-Budget Forecasting: Uses Fenwick Trees, LSTMs, and SARIMA models to predict future expenses.
+## 📌 Project Overview
+This **Canteen Management System** is designed for **college students and canteen staff**. It provides a **seamless food ordering experience**, integrates **AI-powered meal recommendations**, and allows canteen admins to **dynamically manage the menu**.
 
-Anomaly Detection: Identifies fraudulent transactions and unusual spending patterns.
+🚀 **Key Features:**
+- **AI Meal Recommendations** 📊 (Powered by Groq AI)
+- **Dynamic Menu Management** (Add/Delete Menu Items)
+- **Budget-Based Food Suggestions** 💰
+- **Order Placement & Tracking** 📦
+- **DSA Implementation:** ✅ Fenwick Tree for budget tracking, Stack for undo, Queue for order processing
 
-Bank Account Integration: Securely connects to banks via OAuth 2.0 APIs (Plaid, Yodlee, TrueLayer).
+---
 
-Real-Time Transaction Sync: Fetches and categorizes transactions from linked accounts
+## 🛠️ Tech Stack
+- **Frontend:** Streamlit (User Interface)
+- **Backend:** Flask (API and Data Handling)
+- **AI Integration:** Groq API (AI-based meal suggestions)
+- **DSA Concepts:** Fenwick Tree, Stack, Queue
 
-Advanced Data Visualization: Uses Plotly & Streamlit for interactive graphs and reports.
+---
 
-Secure & Scalable: Implements AES-256 encryption, TLS security, and API rate limiting.
+## 🔧 Setup Instructions
 
-Tech Stack
+### 1️⃣ Install Dependencies
+```bash
+pip install flask streamlit requests pandas groq
+```
 
-Backend: FastAPI / Flask (Python)
+### 2️⃣ Run the Backend (Flask API)
+```bash
+python canteen_backend.py
+```
 
-Frontend: Streamlit (for interactive UI)
+### 3️⃣ Run the Frontend (Streamlit App)
+```bash
+streamlit run user_frontend.py
+```
 
-Database: PostgreSQL / MongoDB
+### 4️⃣ Open the Application
+Visit `http://localhost:8501` in your browser to access the **User Interface**.
 
-Machine Learning: Isolation Forest, LSTM Autoencoders, DBSCAN
+---
 
-Security: OAuth 2.0, JWT Authentication, AES Encryption
+## 🚀 Features & Functionality
 
-APIs: Plaid, Yodlee, TrueLayer for bank integration
+### 🔹 **User Side (Students & Customers)**
+- 📋 **View Live Menu** (Fetched from backend)
+- 🧠 **AI-Powered Meal Recommendations** (Based on budget & diet preferences)
+- 🛒 **Add Items to Cart & Place Orders**
+- 🔙 **Undo Last Item (Stack Implementation)**
+
+### 🔸 **Admin Side (Canteen Staff)**
+- ➕ **Add New Menu Items**
+- ❌ **Delete Items from Menu**
+- 📦 **View All Orders**
+
+---
+
+## 🏗️ Future Enhancements
+- 🔐 **Role-Based Access** (Admin vs. User authentication)
+- 🗄️ **Database Integration** (Store orders & menu permanently)
+- 📊 **Order History & Analytics** (Track spending patterns)
+- 🤖 **Voice Assistant for Orders** (Voice-based meal selection)
+
+---
+
+## 🤝 Contributing
+Feel free to **fork this repo** and submit pull requests! Contributions are welcome! 😊
+
+---
+
+## 📜 License
+This project is **open-source** and free to use.
+
+---
+
+🌟 **Enjoy Your AI-Powered Canteen Experience!** 🍽️ 🚀
 
