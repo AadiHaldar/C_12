@@ -1,0 +1,30 @@
+name: Deploy Canteen AI System
+
+on:
+  push:
+    branches:
+      - main  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🚀 Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: 🐍 Set Up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: 📦 Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: 🔄 Run Flask Backend
+      run: |
+        nohup python canteen_backend.py &
+
+    - name: 🔄 Run Streamlit Frontend
+      run: |
+        nohup streamlit run user_frontend.py --server.port 8501 &
